@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="require.js"></script>
+<script>
+    define('a', {
+        add: function(x, y){
+            return console.log(x + y);
+        }
+    });
+    define('b', {
+        sub: function(x, y){
+            return console.log(x - y);
+        }
+    });
+
+    // Use the module (import)
+    require(['a','b'], function(a,b){
+        console.log(a.add(1, 2));
+        console.log(b.sub(2, 1));
+
+
+    });
+
+
+</script>
+</body>
+</html>
